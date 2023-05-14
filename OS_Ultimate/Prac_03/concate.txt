@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "Enter the name of the output file:"
+read output_file
+
+cat > "$output_file"
+
+while true
+do
+    echo "Enter the name of the next file to concatenate (type 'end' to finish):"
+    read input_file
+
+    if [ "$input_file" == "end" ]; then
+        break
+    fi
+
+    cat "$input_file" >> "$output_file"
+done
+
+echo "All files have been concatenated into $output_file."

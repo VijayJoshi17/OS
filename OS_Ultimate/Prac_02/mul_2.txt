@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter the number of terms in the series: "
+read n
+
+echo "The series of numbers multiplied by 2 is: "
+for ((i=1; i<=n; i++))
+do
+    result=$((i * 2))
+    echo "$result"
+done

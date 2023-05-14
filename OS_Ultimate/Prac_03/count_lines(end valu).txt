@@ -1,0 +1,18 @@
+#!/bin/bash
+
+count=0
+
+echo "Enter lines of text (type 'end' to stop):"
+
+while true
+do
+    read line
+    if [ "$line" == "end" ]; then
+        break
+    else
+        echo "$line" >> data.txt
+        count=$((count + 1))
+    fi
+done
+
+echo "You entered $count lines of text."
